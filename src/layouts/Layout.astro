@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>Never Gonna Give You Up - Rick Astley Tribute</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+	</head>
+	<body>
+		<slot />
+	</body>
+</html>
+
+<style is:global>
+	:root {
+		--primary: #FF1E40;
+		--primary-light: #FF4D6A;
+		--primary-dark: #D21435;
+		--secondary: #147EFB;
+		--secondary-light: #3B9AFF;
+		--secondary-dark: #0064D2;
+		--accent: #FF8A00;
+		--neutral-100: #F5F5F7;
+		--neutral-200: #E5E5E7;
+		--neutral-300: #D1D1D6;
+		--neutral-400: #A1A1A6;
+		--neutral-500: #86868B;
+		--neutral-600: #6E6E73;
+		--neutral-700: #3A3A3C;
+		--neutral-800: #1D1D1F;
+		--neutral-900: #000000;
+		--success: #34C759;
+		--warning: #FF9500;
+		--error: #FF3B30;
+		--spacing-1: 8px;
+		--spacing-2: 16px;
+		--spacing-3: 24px;
+		--spacing-4: 32px;
+		--spacing-5: 40px;
+		--spacing-6: 48px;
+		--spacing-7: 56px;
+		--spacing-8: 64px;
+		--border-radius-sm: 6px;
+		--border-radius-md: 12px;
+		--border-radius-lg: 16px;
+		--shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.05);
+		--shadow-md: 0 4px 12px rgba(0, 0, 0, 0.08);
+		--shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.12);
+		--max-width: 1200px;
+		--header-height: 72px;
+	}
+
+	*, *::before, *::after {
+		box-sizing: border-box;
+		margin: 0;
+		padding: 0;
+	}
+
+	html, body {
+		font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+		background-color: var(--neutral-100);
+		color: var(--neutral-800);
+		scroll-behavior: smooth;
+		width: 100%;
+		height: 100%;
+		overflow-x: hidden;
+	}
+
+	body {
+		line-height: 1.5;
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+	}
+
+	h1, h2, h3, h4, h5, h6 {
+		line-height: 1.2;
+		font-weight: 700;
+		margin-bottom: var(--spacing-2);
+	}
+
+	h1 {
+		font-size: 2.5rem;
+	}
+
+	h2 {
+		font-size: 2rem;
+	}
+
+	h3 {
+		font-size: 1.5rem;
+	}
+
+	p {
+		margin-bottom: var(--spacing-2);
+	}
+
+	img, video {
+		max-width: 100%;
+		height: auto;
+	}
+
+	a {
+		color: var(--secondary);
+		text-decoration: none;
+		transition: color 0.2s ease;
+	}
+
+	a:hover {
+		color: var(--secondary-light);
+	}
+
+	button {
+		cursor: pointer;
+		font-family: inherit;
+		border: none;
+		background: none;
+		padding: 0;
+	}
+
+	.container {
+		width: 100%;
+		max-width: var(--max-width);
+		margin: 0 auto;
+		padding: 0 var(--spacing-2);
+	}
+
+	@media (min-width: 768px) {
+		.container {
+			padding: 0 var(--spacing-4);
+		}
+	}
+
+	@keyframes fadeIn {
+		from {
+			opacity: 0;
+			transform: translateY(10px);
+		}
+		to {
+			opacity: 1;
+			transform: translateY(0);
+		}
+	}
+
+	@keyframes pulse {
+		0% {
+			transform: scale(1);
+		}
+		50% {
+			transform: scale(1.05);
+		}
+		100% {
+			transform: scale(1);
+		}
+	}
+
+	@keyframes slideInLeft {
+		from {
+			opacity: 0;
+			transform: translateX(-30px);
+		}
+		to {
+			opacity: 1;
+			transform: translateX(0);
+		}
+	}
+
+	@keyframes slideInRight {
+		from {
+			opacity: 0;
+			transform: translateX(30px);
+		}
+		to {
+			opacity: 1;
+			transform: translateX(0);
+		}
+	}
+</style>

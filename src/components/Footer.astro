@@ -1,0 +1,130 @@
+---
+const currentYear = new Date().getFullYear();
+---
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-content">
+      <div class="footer-logo">
+        <a href="/">Rick Astley Tribute</a>
+        <p class="footer-tagline">Never Gonna Give You Up</p>
+      </div>
+      <div class="footer-links">
+        <div class="footer-links-group">
+          <h3>Navigate</h3>
+          <ul>
+            <li><a href="#video">Watch Video</a></li>
+            <li><a href="#about">About Song</a></li>
+            <li><a href="#lyrics">Lyrics</a></li>
+          </ul>
+        </div>
+        <div class="footer-links-group">
+          <h3>Resources</h3>
+          <ul>
+            <li><a href="https://www.rickastley.co.uk/" target="_blank" rel="noopener">Official Website</a></li>
+            <li><a href="https://www.youtube.com/channel/UCuAXFkgsw1L7xaCfnd5JJOw" target="_blank" rel="noopener">YouTube</a></li>
+            <li><a href="https://open.spotify.com/artist/0gxyHStUsqpMadRV0Di1Qt" target="_blank" rel="noopener">Spotify</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; {currentYear} Rick Astley Tribute. This is a fan site and is not affiliated with Rick Astley.</p>
+      <p>Created with Astro.</p>
+    </div>
+  </div>
+</footer>
+
+<style>
+  .footer {
+    background-color: var(--neutral-800);
+    color: white;
+    padding: var(--spacing-6) 0 var(--spacing-4);
+  }
+
+  .footer-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-4);
+    padding-bottom: var(--spacing-4);
+    border-bottom: 1px solid var(--neutral-700);
+    margin-bottom: var(--spacing-4);
+  }
+
+  .footer-logo a {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: white;
+    transition: color 0.3s ease;
+  }
+
+  .footer-logo a:hover {
+    color: var(--primary-light);
+  }
+
+  .footer-tagline {
+    color: var(--neutral-400);
+    margin-top: var(--spacing-1);
+  }
+
+  .footer-links {
+    display: flex;
+    justify-content: space-between;
+    gap: var(--spacing-4);
+  }
+
+  .footer-links-group h3 {
+    color: white;
+    font-size: 1.1rem;
+    margin-bottom: var(--spacing-2);
+  }
+
+  .footer-links-group ul {
+    list-style: none;
+  }
+
+  .footer-links-group li {
+    margin-bottom: var(--spacing-1);
+  }
+
+  .footer-links-group a {
+    color: var(--neutral-400);
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+
+  .footer-links-group a:hover {
+    color: white;
+  }
+
+  .footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.875rem;
+    color: var(--neutral-500);
+  }
+
+  @media (max-width: 768px) {
+    .footer-content {
+      grid-template-columns: 1fr;
+      gap: var(--spacing-4);
+    }
+
+    .footer-logo {
+      margin-bottom: var(--spacing-3);
+    }
+
+    .footer-bottom {
+      flex-direction: column;
+      gap: var(--spacing-2);
+      text-align: center;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .footer-links {
+      flex-direction: column;
+      gap: var(--spacing-3);
+    }
+  }
+</style>

@@ -1,0 +1,201 @@
+---
+---
+
+<section id="about" class="about-section">
+  <div class="container">
+    <div class="about-content">
+      <div class="about-text">
+        <h2>About the Song</h2>
+        <p>
+          "Never Gonna Give You Up" is a song recorded by British singer and songwriter Rick Astley, released as his debut single in 1987. Written and produced by Stock Aitken Waterman, it was released as the first single from his debut album, <em>Whenever You Need Somebody</em>.
+        </p>
+        <p>
+          The song was a worldwide number-one hit, initially in the United Kingdom in 1987, where it stayed at the top of the chart for five weeks and was the best-selling single of that year. It eventually topped the charts in 25 countries, including the United States and West Germany.
+        </p>
+        <p>
+          The song won Best British Single at the 1988 Brit Awards. In 2004, it was voted number 28 in 50 Most Awesomely Bad Songs... Ever by VH1.
+        </p>
+        <p>
+          The music video for the song has become particularly well known and has garnered much attention through the phenomenon known as "rickrolling", a bait-and-switch practice of providing an ostensibly relevant web link which in fact leads to Astley's video.
+        </p>
+      </div>
+      <div class="about-image">
+        <img src="https://images.pexels.com/photos/33597/guitar-classical-guitar-acoustic-guitar-electric-guitar.jpg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Vintage microphone and instruments" />
+      </div>
+    </div>
+    <div class="timeline">
+      <div class="timeline-item">
+        <div class="timeline-date">July 27, 1987</div>
+        <div class="timeline-content">
+          <h3>Single Release</h3>
+          <p>Released as Rick Astley's debut single in the UK</p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-date">August 15, 1987</div>
+        <div class="timeline-content">
+          <h3>UK #1</h3>
+          <p>Reached number one on UK Singles Chart</p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-date">March 12, 1988</div>
+        <div class="timeline-content">
+          <h3>US #1</h3>
+          <p>Topped the US Billboard Hot 100</p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-date">2007</div>
+        <div class="timeline-content">
+          <h3>Rickrolling Begins</h3>
+          <p>The "Rickrolling" internet meme is born</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .about-section {
+    padding: var(--spacing-7) 0;
+    background-color: white;
+  }
+
+  .about-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-6);
+    margin-bottom: var(--spacing-6);
+  }
+
+  .about-text {
+    opacity: 0;
+    animation: slideInLeft 0.8s ease-out forwards;
+    animation-delay: 0.2s;
+  }
+
+  .about-text h2 {
+    font-size: 2.5rem;
+    margin-bottom: var(--spacing-3);
+    color: var(--neutral-800);
+  }
+
+  .about-text p {
+    margin-bottom: var(--spacing-3);
+    color: var(--neutral-700);
+    font-size: 1.1rem;
+    line-height: 1.6;
+  }
+
+  .about-image {
+    border-radius: var(--border-radius-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow-lg);
+    opacity: 0;
+    animation: slideInRight 0.8s ease-out forwards;
+    animation-delay: 0.4s;
+  }
+
+  .about-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+  }
+
+  .about-image:hover img {
+    transform: scale(1.05);
+  }
+
+  .timeline {
+    margin-top: var(--spacing-6);
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--spacing-3);
+  }
+
+  .timeline-item {
+    opacity: 0;
+    animation: fadeIn 0.8s ease-out forwards;
+    background-color: var(--neutral-100);
+    border-radius: var(--border-radius-md);
+    padding: var(--spacing-3);
+    box-shadow: var(--shadow-sm);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .timeline-item:nth-child(1) {
+    animation-delay: 0.4s;
+  }
+
+  .timeline-item:nth-child(2) {
+    animation-delay: 0.6s;
+  }
+
+  .timeline-item:nth-child(3) {
+    animation-delay: 0.8s;
+  }
+
+  .timeline-item:nth-child(4) {
+    animation-delay: 1s;
+  }
+
+  .timeline-item:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-md);
+  }
+
+  .timeline-date {
+    font-weight: 700;
+    color: var(--primary);
+    margin-bottom: var(--spacing-1);
+    font-size: 0.9rem;
+  }
+
+  .timeline-content h3 {
+    font-size: 1.2rem;
+    margin-bottom: var(--spacing-1);
+  }
+
+  .timeline-content p {
+    font-size: 0.9rem;
+    color: var(--neutral-600);
+  }
+
+  @media (max-width: 980px) {
+    .timeline {
+      grid-template-columns: repeat(2, 1fr);
+      gap: var(--spacing-3);
+    }
+  }
+
+  @media (max-width: 768px) {
+    .about-content {
+      grid-template-columns: 1fr;
+      gap: var(--spacing-4);
+    }
+
+    .about-text h2 {
+      font-size: 2rem;
+    }
+
+    .about-text p {
+      font-size: 1rem;
+    }
+
+    .about-image {
+      order: -1;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .timeline {
+      grid-template-columns: 1fr;
+    }
+
+    .about-text h2 {
+      font-size: 1.75rem;
+    }
+  }
+</style>

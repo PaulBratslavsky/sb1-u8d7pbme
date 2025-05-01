@@ -1,0 +1,165 @@
+---
+---
+
+<section id="lyrics" class="lyrics-section">
+  <div class="container">
+    <h2 class="section-title">Lyrics</h2>
+    <div class="lyrics-container">
+      <div class="lyrics-content">
+        <div class="verse">
+          <p>We're no strangers to love</p>
+          <p>You know the rules and so do I</p>
+          <p>A full commitment's what I'm thinking of</p>
+          <p>You wouldn't get this from any other guy</p>
+        </div>
+        <div class="verse">
+          <p>I just wanna tell you how I'm feeling</p>
+          <p>Gotta make you understand</p>
+        </div>
+        <div class="chorus">
+          <p>Never gonna give you up</p>
+          <p>Never gonna let you down</p>
+          <p>Never gonna run around and desert you</p>
+          <p>Never gonna make you cry</p>
+          <p>Never gonna say goodbye</p>
+          <p>Never gonna tell a lie and hurt you</p>
+        </div>
+        <div class="verse">
+          <p>We've known each other for so long</p>
+          <p>Your heart's been aching, but you're too shy to say it</p>
+          <p>Inside, we both know what's been going on</p>
+          <p>We know the game and we're gonna play it</p>
+        </div>
+        <div class="verse">
+          <p>And if you ask me how I'm feeling</p>
+          <p>Don't tell me you're too blind to see</p>
+        </div>
+        <div class="chorus">
+          <p>Never gonna give you up</p>
+          <p>Never gonna let you down</p>
+          <p>Never gonna run around and desert you</p>
+          <p>Never gonna make you cry</p>
+          <p>Never gonna say goodbye</p>
+          <p>Never gonna tell a lie and hurt you</p>
+        </div>
+      </div>
+      <div class="lyrics-aside">
+        <div class="lyrics-info">
+          <h3>Song Info</h3>
+          <ul>
+            <li><strong>Title:</strong> Never Gonna Give You Up</li>
+            <li><strong>Artist:</strong> Rick Astley</li>
+            <li><strong>Album:</strong> Whenever You Need Somebody</li>
+            <li><strong>Released:</strong> July 27, 1987</li>
+            <li><strong>Genre:</strong> Dance-pop, blue-eyed soul</li>
+            <li><strong>Songwriters:</strong> Stock Aitken Waterman</li>
+            <li><strong>Producer:</strong> Stock Aitken Waterman</li>
+            <li><strong>Label:</strong> RCA Records</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .lyrics-section {
+    padding: var(--spacing-7) 0;
+    background-color: var(--neutral-100);
+    background-image: linear-gradient(135deg, rgba(255, 255, 255, 0.5), rgba(255, 30, 64, 0.05));
+  }
+
+  .section-title {
+    text-align: center;
+    margin-bottom: var(--spacing-5);
+    color: var(--neutral-800);
+    font-size: 2.5rem;
+    opacity: 0;
+    animation: fadeIn 0.8s ease-out forwards;
+  }
+
+  .lyrics-container {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: var(--spacing-5);
+  }
+
+  .lyrics-content {
+    background-color: white;
+    border-radius: var(--border-radius-lg);
+    padding: var(--spacing-4);
+    box-shadow: var(--shadow-md);
+    opacity: 0;
+    animation: fadeIn 0.8s ease-out forwards;
+    animation-delay: 0.2s;
+  }
+
+  .verse, .chorus {
+    margin-bottom: var(--spacing-3);
+  }
+
+  .verse p, .chorus p {
+    margin-bottom: var(--spacing-1);
+    line-height: 1.6;
+  }
+
+  .chorus {
+    color: var(--primary);
+    font-weight: 500;
+  }
+
+  .lyrics-aside {
+    opacity: 0;
+    animation: fadeIn 0.8s ease-out forwards;
+    animation-delay: 0.4s;
+  }
+
+  .lyrics-info {
+    background-color: white;
+    border-radius: var(--border-radius-lg);
+    padding: var(--spacing-4);
+    box-shadow: var(--shadow-md);
+    position: sticky;
+    top: calc(var(--header-height) + var(--spacing-3));
+  }
+
+  .lyrics-info h3 {
+    margin-bottom: var(--spacing-3);
+    color: var(--neutral-800);
+  }
+
+  .lyrics-info ul {
+    list-style: none;
+  }
+
+  .lyrics-info li {
+    margin-bottom: var(--spacing-2);
+    color: var(--neutral-700);
+  }
+
+  .lyrics-info strong {
+    color: var(--neutral-800);
+  }
+
+  @media (max-width: 768px) {
+    .lyrics-container {
+      grid-template-columns: 1fr;
+    }
+
+    .section-title {
+      font-size: 2rem;
+    }
+
+    .lyrics-info {
+      position: relative;
+      top: 0;
+      margin-top: var(--spacing-4);
+    }
+  }
+
+  @media (max-width: 480px) {
+    .section-title {
+      font-size: 1.75rem;
+    }
+  }
+</style>
